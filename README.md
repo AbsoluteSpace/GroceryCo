@@ -11,7 +11,7 @@ The customer's basket is represented by groceries/groceries.txt which is an unor
 
 ## Design Choices and Assumptions
 
-Instead of just having the price catalog be a dictionar where the key is the item's name and the value it's cost, I chose to wrap the cost as what I've called an Item so that it contain more things like the sale price, best before date, and so on which should make extending the kiosk's functionality easier.
+Instead of just having the price catalog be a dictionary where the key is the item's name and the value it's cost, I chose to wrap the cost as what I've called an Item so that it contain more things like the sale price, best before date, and so on which should make extending the kiosk's functionality easier.
 
 I've made the assumption that the last price given for an item (assuming it's valid) is the correct price, so for example if multiple prices are given for a single item in one prices.txt, I just use the latest.
 
