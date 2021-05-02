@@ -4,7 +4,6 @@ using System.IO;
 
 namespace GroceryCo.src
 {
-    // Something like this to easily extend things into like best before dates or whatever
     public class Prices
     {
         public Dictionary<string, Item> prices { get; set; }
@@ -22,14 +21,12 @@ namespace GroceryCo.src
             }
 
             var itemsAndPrices = System.IO.File.ReadAllText(filepath);
-            // File.WriteAllText(filepath, String.Empty);
+            File.WriteAllText(filepath, String.Empty);
 
-            // duplicate prices or conflicting ones - use the last
             foreach (var itemAndPrice in itemsAndPrices.Split(","))
             {
                 var name = itemAndPrice.Split(":")[0].Trim(' ');
                 var cost = itemAndPrice.Split(":")[1];
-                // what if it's not an int? or what if it's not a string?
                 double costInDollars = 0;
                 double saleInDollars = 0;
 
@@ -62,8 +59,6 @@ namespace GroceryCo.src
             {
                 prices[name].price = cost;
                 prices[name].salePrice = sale == -1 ? cost : sale;
-                // // does that alone update the cost? or do I need the next line too
-                // prices[item] = prices[item];
             }
             else
             {

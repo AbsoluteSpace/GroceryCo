@@ -5,7 +5,6 @@ using System.IO;
 
 namespace GroceryCo.src
 {
-    // Something like this to easily extend things into like best before dates or whatever
     public class Checkout
     {
         private Dictionary<string, int> cart = new Dictionary<string, int>();

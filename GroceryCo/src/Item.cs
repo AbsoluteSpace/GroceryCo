@@ -2,7 +2,6 @@ using System.Collections.Generic;
 
 namespace GroceryCo.src
 {
-    // Something like this to easily extend things into like best before dates or whatever
     public class Item
     {
         public double price { get; set; }
